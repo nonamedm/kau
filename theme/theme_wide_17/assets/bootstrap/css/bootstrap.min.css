@@ -4588,7 +4588,7 @@ input[type=submit].btn-block {
     .navbar-expand-lg>.container,
     .navbar-expand-lg>.container-fluid {
         -ms-flex-wrap: nowrap;
-        flex-wrap: nowrap
+        flex-wrap: nowrap;
     }
 
     .navbar-expand-lg .navbar-collapse {
@@ -4608,7 +4608,7 @@ input[type=submit].btn-block {
     .navbar-expand-xl>.container,
     .navbar-expand-xl>.container-fluid {
         padding-right: 0;
-        padding-left: 0
+        padding-left: 0;
     }
 }
 

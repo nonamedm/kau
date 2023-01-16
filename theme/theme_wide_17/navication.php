@@ -47,8 +47,8 @@
 }
 </style>
 <nav class="navbar fixed-top navbar-expand-lg navbar-white bg-white fixed-top">
-  <div class="container whipcontainer" style="text-align:center;">
-	<a class="navbar-brand" href="<?php echo G5_URL?>" class="logo"><img src="<?php echo G5_THEME_URL?>/img/logo.png" style="width:200px; height:110px;"></a>
+  <div class="container whipcontainer" style="text-align:center; width:80%;">
+	<a class="navbar-brand" href="<?php echo G5_URL?>" class="logo"><img src="<?php echo G5_THEME_URL?>/img/logo.png" style="width:200px;"></a>
 	<button class="navbar-toggler navbar-dark navbar-toggler-right" type="button" data-toggle="collapse" data-target="#navbarResponsive" aria-controls="navbarResponsive" aria-expanded="false" aria-label="Toggle navigation" style="position: absolute; right: 5px;">
 	  <span class="navbar-toggler-icon"></span>
 	</button>
