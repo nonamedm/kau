@@ -46,30 +46,27 @@ include_once(G5_THEME_PATH.'/head.php');
 
 
 <!-------------------------- 게시판 -------------------------->
-<div class="padding-top-60 col-lg-8" style="margin:0 auto;">
+<!-- <div class="padding-top-60 col-lg-8" style="margin:0 auto;"> -->
+<div class="col-lg-10" style="margin:0 auto;">
 	<div class="container">
 		<div class="row">
-			<div class="col-lg-6 col-md-12 col-sm-12 col-xs-12">
-				<?php echo latest('theme/basic_main_one', 'notice', 5, 40);?>
-			</div>
-			<div class="col-lg-6 col-md-6 col-sm-6 col-xs-12 center_contact" style="float: left;text-align: left;margin-top: 10px;">
-				<div style="display: flex;justify-content: center;">
-					<dl style="padding-top: 10px;padding-right: 30px;">
-						<dt style="font-size: 20px;font-weight: bold;margin-bottom: 10px;color: #525252;">고객센터</dt>
-						<dd style="color: #6D6D6D;font-size: 12px;font-weight: 600;"><i class="far fa-building"></i> 전라북도 남원시 농고길 56<br/></dd>
-						<dd style="color: #6D6D6D;font-size: 12px;font-weight: 600;"><i class="fas fa-phone"></i> 063-636-4875<br /></dd>
-						<dd style="color: #6D6D6D;font-size: 12px;font-weight: 600;"><i class="fas fa-fax"></i> 063-635-4875<br /></dd>
-						<dd style="color: #6D6D6D;font-size: 12px;font-weight: 600;"><i class="far fa-envelope-open"></i> <a href="mailto:namwonyuncenter@naver.com">Email : namwonyuncenter@naver.com</a><br /></dd>
-<!-- 											
-						<dd>
-							<i class="fa fa-phone fa-2x"></i>
-							<span class="phone_no" style="font-size: 29px;color: #525252;font-weight: 700;margin-top: 10px;margin-bottom: 5px;letter-spacing: -0.025em;">063-636-4875</span>
-						</dd> -->
-						<dd>
-							<!-- <span class="bank_no" style="font-size: 16px;font-weight: 500;margin-top: 10px;margin-bottom: 5px;letter-spacing: -0.025em;">농협 000-0000-00000-00 000</span> -->
-						</dd>
-					</dl>
+			<div class="col-lg-5 col-md-12 col-sm-12 col-xs-12">
+				<div>
+					<?php echo latest('theme/basic_main_one', 'notice', 5, 40);?>
 				</div>
+				<div class="clock" style="width:100%;height:153px;background:#fff; margin-top:10px; text-align:center;padding-top: 20px;">
+						<h1 style="font-size: 20px;font-weight: 800;color:#878484;">종강까지 남은 시간 ⏱
+							<span id="currentTime" style="display:none;"></span>
+						</h1>
+						<div id="countTime" style="width:100%; height:100px; font-size:35px; text-align:center; overflow:hidden;">
+						</div>
+						
+				</div>
+			</div>
+			<div class="col-lg-7 col-md-12 col-sm-12 col-xs-12">
+				<?php 
+					include_once('theme/theme_wide_17/skin/board/wz.schedule.board/list.skin.min.php');
+				?>
 			</div>
 		</div>
 	</div>

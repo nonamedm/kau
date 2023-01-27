@@ -37,7 +37,7 @@ $wrc_lang = $wscb['wrc_lang'] ? $wscb['wrc_lang'] : 'ko';
 ?>
 
 <script type="text/javascript">
-<!--
+
 document.addEventListener("DOMContentLoaded", function() {
     var initialLocaleCode = "<?php echo $wscb['wrc_lang']?>";
     var calendarEl = document.getElementById('calendar');
@@ -58,7 +58,7 @@ document.addEventListener("DOMContentLoaded", function() {
         eventLimit: false, // allow "more" link when too many events
         timeZone: 'UTC',
         events: {
-            url: "<?php echo WCAL_PLUGIN_URL;?>/get-events.php?bo_table="+g5_bo_table+"&sca=<?php echo urlencode($sca)?>",
+            url: "<?php echo WCAL_PLUGIN_URL;?>/get-events.php?bo_table=schedule&sca=<?php echo urlencode($sca)?>",
             error: function() {
                 $("#script-warning").show();
             }
@@ -123,7 +123,7 @@ jQuery(document).ready(function () {
     $(document).on('click', '#btn-settings', function() {
         $.magnificPopup.open({
             items: {
-                src: '<?php echo WCAL_PLUGIN_URL?>/setting.php?bo_table='+ g5_bo_table
+                src: '<?php echo WCAL_PLUGIN_URL?>/setting.php?bo_table=schedule'
             },
             type: 'iframe'
         });

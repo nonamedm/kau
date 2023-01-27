@@ -6,32 +6,14 @@ unset($list);
 add_stylesheet('<link rel="stylesheet" href="'.$board_skin_url.'/style.css?v=191112">', 0);
 ?>
 <style>
+    #calendar {
+        width:100% !important;
+    }
     @media (max-width: 1089px) {
-        #calendar {
-            width:100% !important;
-        }
 
     }
 </style>
-<?php
-include_once(G5_THEME_PATH.'/leftnav.php');
-?>
-<div class="center-heading">
-    <h2 style="color:#696969; font-weight: 700; font-family: 'Roboto Sans-serif';">
-        <?php 
-        if($bo_table=="counsel") {
-            echo "상담문의";
-        } else if ($bo_table=="notice") {
-            echo "공지사항";
-        } else if ($bo_table=="schedule") {
-            echo "학사일정";
-        }
-        
-        ?>
-    </h2>
-    <span class="center-line"></span>
-</div>
-<div class="container-body" id="bo_list" style="width:<?php echo $width; ?>">
+<div class="container-body" id="bo_list" style="width:100%; margin: 0 auto; max-width:100%;">
 
     <div id="bo_btn_top">
         <?php if ($rss_href || $write_href) { ?>
