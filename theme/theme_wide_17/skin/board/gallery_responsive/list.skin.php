@@ -36,6 +36,7 @@ add_stylesheet('<link rel="stylesheet" href="'.$board_skin_url.'/style.css">', 0
 
 
 
+
 		<div class="center-heading">
 			<h2 style="color:#696969; font-weight: 700; font-family: 'Roboto Sans-serif';">재활사 소개</h2>
 			<span class="center-line"></span>
