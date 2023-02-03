@@ -151,35 +151,21 @@ include_once(G5_THEME_PATH.'/leftnav.php');
 	<div class="container-body margin-bottom-80">
 		<article id="sub_contents" class="cont s_body" style="text-align:center;">
 			<div class="location margin-top-60 col-lg-12 col-md-12 col-sm-12" style="display:flex;">
-				<iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3251.430858410807!2d127.39172170580684!3d35.41935541904724!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x356e2f48801d4c51%3A0xb5a7afbf5d59974f!2z64Ko7JuQ7JWE64-Z67Cc64us7IS87YSw!5e0!3m2!1sko!2skr!4v1667371520989!5m2!1sko!2skr" width="100%" height="350" style="border:0;" allowfullscreen="" loading="lazy" referrerpolicy="no-referrer-when-downgrade"></iframe>	
+				<iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3161.089334376276!2d126.86251321450524!3d37.60005647979159!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x357c9a2b10065cbf%3A0x4408073cf76f4e5b!2z6rOg7JaR7IucIO2YhOyynOuPmSDtlZzqta3tla3qs7XrjIDtlZnqtZAg7ZWZ7IOd7ZqM6rSA!5e0!3m2!1sko!2skr!4v1675387764496!5m2!1sko!2skr" width="100%" height="350" style="border:0;" allowfullscreen="" loading="lazy" referrerpolicy="no-referrer-when-downgrade"></iframe>
 				<div style="width:100%; text-align: left; padding-left:5%;">
-					<h2 class="font-weight-bold" style="color:#696969; text-align:center;">남원아동발달센터</h2>
+					<h2 class="font-weight-bold" style="color:#696969; text-align:center;">한국항공대학교 총학생회</h2>
 					
-					<p style="font-size: 15px;margin-bottom: 10px;color: #525252;">A. 전라북도 남원시 농고길 56 용성고 옆</p>
-					<p style="font-size: 15px;margin-bottom: 10px;color: #525252;">T. 063-636-4875</p>
-					<p style="font-size: 15px;margin-bottom: 10px;color: #525252;">F. 063-635-4875</p>
-					<p style="font-size: 15px;margin-bottom: 10px;color: #525252;">E. namwonyuncenter@naver.com</p>
+					<span class="material-icons" style="position:absolute">home</span><p style="font-size: 15px;margin-bottom: 10px;color: #525252;margin: -1px 0 0 30px;"> 경기도 고양시 항공대학로76, 학생회관 202-1호 총학생회실</p><br>
+					<span class="material-icons" style="position:absolute">call</span><p style="font-size: 15px;margin-bottom: 10px;color: #525252;margin: -1px 0 0 30px;"> 02-300-0235</p><br>
+					<svg class="svg-icon" viewBox="0 0 20 20" style="width:25px;position:absolute"><path fill="black" d="M11.344,5.71c0-0.73,0.074-1.122,1.199-1.122h1.502V1.871h-2.404c-2.886,0-3.903,1.36-3.903,3.646v1.765h-1.8V10h1.8v8.128h3.601V10h2.403l0.32-2.718h-2.724L11.344,5.71z"></path></svg>
+					<p style="font-size: 15px;margin-bottom: 10px;color: #525252;margin: -1px 0 0 30px;"> 한국항공대학교 총학생회 (kau.accompany)</p><br>
+					<svg class="svg-icon" viewBox="0 0 20 20" style="width:25px;position:absolute"><path fill="black" d="M14.52,2.469H5.482c-1.664,0-3.013,1.349-3.013,3.013v9.038c0,1.662,1.349,3.012,3.013,3.012h9.038c1.662,0,3.012-1.35,3.012-3.012V5.482C17.531,3.818,16.182,2.469,14.52,2.469 M13.012,4.729h2.26v2.259h-2.26V4.729z M10,6.988c1.664,0,3.012,1.349,3.012,3.012c0,1.664-1.348,3.013-3.012,3.013c-1.664,0-3.012-1.349-3.012-3.013C6.988,8.336,8.336,6.988,10,6.988 M16.025,14.52c0,0.831-0.676,1.506-1.506,1.506H5.482c-0.831,0-1.507-0.675-1.507-1.506V9.247h1.583C5.516,9.494,5.482,9.743,5.482,10c0,2.497,2.023,4.52,4.518,4.52c2.494,0,4.52-2.022,4.52-4.52c0-0.257-0.035-0.506-0.076-0.753h1.582V14.52z"></path>
+					</svg><p style="font-size: 15px;margin-bottom: 10px;color: #525252;margin: -1px 0 0 30px;"> 한국항공대학교 총학생회 (@kau._.rm)</p><br>
+					<span class="material-icons" style="position:absolute">mail</span><p style="font-size: 15px;margin-bottom: 10px;color: #525252;margin: -1px 0 0 30px;"> kaustudentcouncil@gmail.com</p><br>
+					<span class="material-icons" style="position:absolute">question_answer</span><p style="font-size: 15px;margin-bottom: 10px;color: #525252;margin: -1px 0 0 30px;"> 한국항공대학교 총학생회 카카오톡 (kau.chonghak)</p>
 				</div>
 			</div>
-			<div class="location margin-top-60 col-lg-12 col-md-12 col-sm-12" style="display:flex;">
-				<iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3251.5349028381393!2d127.38779211514422!3d35.41677728025686!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x356e2ff78ee6c6f7%3A0x26e7b55d03f88700!2z64Ko7JuQ7IucIOuwnOuLrOyepeyVoOyduCDso7zqsIQg7Zmc64-ZIOyEnOu5hOyKpA!5e0!3m2!1sko!2skr!4v1667883412444!5m2!1sko!2skr" width="100%" height="350" style="border:0;" allowfullscreen="" loading="lazy" referrerpolicy="no-referrer-when-downgrade"></iframe>
-				<div style="width:100%; text-align: left; padding-left:5%;">
-					<h2 class="font-weight-bold" style="color:#696969; text-align:center;">남원시 발달장애인 주간활동서비스</h2>
-					
-					<p style="font-size: 15px;margin-bottom: 10px;color: #525252;">A. 전라북도 남원시 시청북로 9</p>
-					<p style="font-size: 15px;margin-bottom: 10px;color: #525252;">T. 063-626-4875</p>
-					<p style="font-size: 15px;margin-bottom: 10px;color: #525252;">F. 063-634-4875</p>
-					<p style="font-size: 15px;margin-bottom: 10px;color: #525252;">E. nwdaycenter@naver.com</p>
-				</div>
-			</div>
-			<div class="location margin-top-60 col-lg-12 col-md-12 col-sm-12" style="display:flex;">
-				<iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3251.2425596104895!2d127.6379431!3d35.424020899999995!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x356fcaa7921bac27%3A0x36d373fb1f07cce7!2z7KCE652867aB64-EIOuCqOybkOyLnCDsgrDrgrTrqbQg67Cx7J2866asIDM3Mg!5e0!3m2!1sko!2skr!4v1667523100405!5m2!1sko!2skr" width="100%" height="350" style="border:0;" allowfullscreen="" loading="lazy" referrerpolicy="no-referrer-when-downgrade"></iframe>
-				<div style="width:100%; text-align: left; padding-left:5%;">
-					<h2 class="font-weight-bold" style="color:#696969; text-align:center;">산내지부</h2>
-					
-					<p style="font-size: 15px;margin-bottom: 10px;color: #525252;">Address. 전라북도 남원시 산내면 백일리 375-5</p>
-				</div>
-			</div>
+			
 		</article>		
 	</div>
 

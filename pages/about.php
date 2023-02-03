@@ -78,15 +78,16 @@ include_once(G5_THEME_PATH.'/leftnav.php');
 
 	<div class="container-body margin-top-80 margin-bottom-80">
       <div class="row">
-        <div class="col-lg-6">
+        <div class="col-lg-6" style="text-align:center;">
 			<img src="<?php echo G5_URL?>/pages/img/intro.jpg" class="img-fluid" style="width:100%;">
+			<p class="ks3" style="text-align:center;">회장 이정식 | 부회장 장연아</p>
         </div>
         <div class="col-lg-6 ks4">
 			<ul class="list-unstyle">
 			<li class="media">
 				<div class="media-body">
 					
-					<h5 class="mt-0 mb-1" style="font-weight:600;">안녕하세요.</h5>
+					<h5 class="mt-5 mb-1" style="font-weight:600;">안녕하세요.</h5>
 					<h5 class="mt-0 mb-1" style="font-weight:600;">한국항공대학교 제49대 총학생회 하랑입니다.</h5>
 					<br><br>
 					<p class="ks3">

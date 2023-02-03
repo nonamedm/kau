@@ -150,7 +150,7 @@ include_once(G5_THEME_PATH.'/leftnav.php');
 			<img src="<?php echo G5_URL?>/pages/img/organization2.png" class="img-fluid">
 		</article>		
 		<article id="sub_contents" class="cont sub_contents2 s_body" style="text-align:center; display:none;">
-			<img src="<?php echo G5_URL?>/pages/img/organization3.png" class="img-fluid">
+			<img src="<?php echo G5_URL?>/pages/img/organization2.png" class="img-fluid">
 		</article>		
 	</div>
 
