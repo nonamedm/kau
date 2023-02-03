@@ -139,16 +139,20 @@ jQuery(document).ready(function () {
         var pageX = $(window).width();
         var pageY = $(window).height();
         var divTop = e.pageY/4;
-        var divLeft = e.pageX;
+        var divLeft = e.pageX/3;
         console.log("window크기",pageX);
         console.log("클릭위치",divLeft);
         if(pageX>=992) {
-            if(divLeft+580>pageX) {
+            if(divLeft+280>pageX) {
                 divLeft = pageX-580;
+            } else {
+                
             }
         } else {
             if(divLeft+280>pageX) {
-                divLeft = pageX-280;
+                divLeft = pageX-400;
+            } else {
+                
             }
         }
         $("#tool-popup").css({"display":'block', "position":"absolute","top": divTop, "left": divLeft, "z-index":"10000"});

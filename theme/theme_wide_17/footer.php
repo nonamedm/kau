@@ -1,25 +1,41 @@
 	</div>
-	<footer class="" style="background-color:#D9ADA0;">
+	<style>
+		.sub-footer {
+			width: 100%;
+			background: white;
+			padding: 11px 5px 11px 42px;
+			display: block;
+		}
+		.sub-footer p:nth-child(1) {
+			width: 12px;
+			height: 16px;
+			border-left: 0;
+		}
+		.sub-footer p {
+			border-left: 1px solid #828282;
+			color: #828282;
+			margin-right: 8px;
+			padding-left: 8px;
+			font-size: 13px;
+			margin-bottom: 0px;
+		}
+	</style>
+	<footer class="" style="">
 		<div class="container footer">
-			<div class="row" style="justify-content: center; padding: 10px 0 10px 0;">
-				<div style="margin-right: 20px;">
-					<img id="ftlogo" src="<?php echo G5_IMG_URL ?>/footer-logo.png" style="width:50px;" alt="<?php echo $config['cf_title']; ?>">
-				</div>
-				<div class="" style="color:#FFF">
-					<img id="ftlogo2" src="<?php echo G5_IMG_URL ?>/footer-logo2.png" style="width:380px; margin-top:10px;" alt="<?php echo $config['cf_title']; ?>"><!-- image or text  -->
-					<!-- <h2 style="font-family: 'Godo'; font-size:1.5rem; font-weight: 400;">남원윤수민언어심리상담센터</h2>image or text  -->
-					<!-- <p class="ks2 f12">
-					
-					</p>
-					<p class="ks2 f12">
-						<i class="far fa-building"></i> 전라북도 남원시 농고길 56<br />
-						<i class="fas fa-phone"></i> 연락처 : 063-636-4875<br />
-						<i class="far fa-envelope-open"></i> <a href="mailto:namwonyuncenter@naver.com" style="color:#FFF">Email : namwonyuncenter@naver.com</a><br />
-					</p> -->
-
-				</div>
-			</div>
+			
 		</div><!--/container-->
+		<div style="width:80%; margin:0 auto; border-top:3px solid black;margin-top: 5%;">
+			<div class="sub-footer">
+				<p></p>
+				<p><b style="color:#404688;font-size: large;">한 국 항 공 대 학 교 총 학 생 회</b></p> <br>
+				<p>경기도 고양시 항공대학로76, 학생회관 202-1호</p> <br>
+				<p>
+					02-300-0235
+				</p>
+				<p> kaustudentcouncil@gmail.com </p> <br>
+				<p>COPYRIGHT 2022 STUDENT COUNCIL ALL RIGHTS RESERVED</p> <br>
+			</div>
+		</div>
     </footer>
 	<!--<div class="container-fluid bg-gray">
 		<div class="col-md-12 text-white text-center en1">

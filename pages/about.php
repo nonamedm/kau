@@ -72,38 +72,32 @@ include_once(G5_THEME_PATH.'/head.php');
 include_once(G5_THEME_PATH.'/leftnav.php');
 ?>
 	<div class="center-heading en1 margin-top-40">
-		<h2 class="font-weight-bold" style="color:#696969;">센터장 인사말</h2>
+		<h2 class="font-weight-bold" style="color:#696969;">회장단 인사</h2>
 		<span class="center-line"></span>
 	</div>
 
 	<div class="container-body margin-top-80 margin-bottom-80">
       <div class="row">
         <div class="col-lg-6">
-			<img src="<?php echo G5_URL?>/pages/img/about_01.png" class="img-fluid">
+			<img src="<?php echo G5_URL?>/pages/img/intro.jpg" class="img-fluid" style="width:100%;">
         </div>
         <div class="col-lg-6 ks4">
 			<ul class="list-unstyle">
 			<li class="media">
 				<div class="media-body">
+					
+					<h5 class="mt-0 mb-1" style="font-weight:600;">안녕하세요.</h5>
+					<h5 class="mt-0 mb-1" style="font-weight:600;">한국항공대학교 제49대 총학생회 하랑입니다.</h5>
+					<br><br>
 					<p class="ks3">
-					안녕하십니까?</p>
-					<p class="ks3">
-					이렇게 만나뵙게 되어 반갑습니다. </p>
-					<p class="ks3">
-					2009년 말 언어발달지체 아동에 대한 중재를 목표로 남원시청 앞 작은 공간을 임대하여 리모델링을 하던 기억이 떠오릅니다. 언어치료 과정에서 정서적 어려움을 동반하는 아동이 많음을 알게 되며 놀이치료, 미술치료, 음악치료, 상담 등 정서적 영역을 확장해왔습니다.
+					저희 하랑 총학생회에서는 여러분과 함께, 새로운 항대 공동체에 맞는 초석을 세워가고자 합니다..
 					</p>
 					<p class="ks3">
-					서비스 대상 또한 초기에는 아동과 청소년 위주로 진행하던 것이 지금은 영유아부터 성인까지 다양한 연령대의 이용자에게 서비스를 제공하고 있습니다.
+					항대라는 이름 아래에서 우리는 '하랑'이라는 이름과 같이 보다 높이, 하늘과 같이 높이 되어 결실을 이루어 내겠습니다..
 					</p>
 					<p class="ks3">
-					짧지 않은 기간동안 함께했던 아동청소년이 어려움을 딛고 사회에 첫발을 내딛는 모습을 보게 될 때 기쁜 눈물이 흐르는 경험을 할 때마다 하고 있는 일의 가치를 깨닫곤 합니다. 
+					2023년에는 학우분들과 새로운 일상을 책임지고, 학우분들의 권리를 지켜낼 것이며, 함께하는 지속가능한 학생사회를 세울 수 있도록 노력하겠습니다. 
 					</p>
-					<p class="ks3">
-					혹여 말이나 소통에 어려움이 있다면, </p>
-					<p class="ks3">일상에 지쳐 힘드시다면,</p>
-					<p class="ks3">따뜻한 마음과 감동이 흐르는 곳,  남원윤수민언어심리상담센터에 다녀가시지 않겠어요? </p>
-					<p class="ks3">이곳에서 새로운 인연을 기다리겠습니다. </p>
-					<h5 class="mt-0 mb-1" style="font-weight:600;"><br><br>남원윤수민언어심리상담센터 대표 윤수민</h5>
 				</div>
 			</li>
 			</ul>

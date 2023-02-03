@@ -14,8 +14,27 @@ if(G5_COMMUNITY_USE === false) {
 
 include_once(G5_THEME_PATH.'/head.php');
 ?>
+<?php
+	if (!defined('_GNUBOARD_')) exit; // 개별 페이지 접근 불가
 
+	include_once(G5_PLUGIN_PATH.'/jquery-ui/datepicker.php'); // 달력 ?>
+<script>
+$(function(){
+	$("#datePicker").datepicker({
+		showOn: "both",
+		dateFormat: "yy-mm-dd",
+		dayNames: ['일요일','월요일','화요일','수요일','목요일','금요일','토요일'],
+		dayNamesMin: ['일','월','화','수','목','금','토'],
+		monthNames: ['1월','2월','3월','4월','5월','6월','7월','8월','9월','10월','11월','12월',],
+		buttonImageOnly:true,
+		showMonthAfterYear:true,
+		yearSuffix: "년" 
+// 		changeMonth:true,
+// 		changeYear:true
+	});
+});
 
+</script>
 
 
 <!-------------------------- 슬라이드 -------------------------->
@@ -26,7 +45,7 @@ include_once(G5_THEME_PATH.'/head.php');
 	</ol> -->
 	<div class="carousel-inner" role="listbox">
 	  <!-- Slide One - Set the background image for this slide in the line below -->
-	  <div class="carousel-item active" style="background-image: url('<?php echo G5_THEME_URL?>/img/main1.jpg'); height: 250px; margin-top: 100px;">
+	  <div class="carousel-item active" style="background-image: url('<?php echo G5_THEME_URL?>/img/main2.jpg'); height: 250px; margin-top: 100px;">
 		<div class="carousel-caption d-md-block">
 		  <!-- <h3 class="ks4" style="text-shadow: rgb(0 0 0 / 40%) 0px 4px 5px;">남원윤수민언어심리상담센터</h3> -->
 		</div>
@@ -60,7 +79,6 @@ include_once(G5_THEME_PATH.'/head.php');
 						</h1>
 						<div id="countTime" style="width:100%; height:100px; font-size:35px; text-align:center; overflow:hidden;">
 						</div>
-						
 				</div>
 			</div>
 			<div class="col-lg-7 col-md-12 col-sm-12 col-xs-12">
@@ -70,8 +88,26 @@ include_once(G5_THEME_PATH.'/head.php');
 			</div>
 		</div>
 	</div>
+	<div id="countTimeChange" style="display:none; border: 2px solid black; padding:50px; border-radius: 20px;background-color: white; width: 300px; height:300px; position: fixed; top: 40%; left: 40%;z-index: 999;">
+		<h1 style="font-size:20px; text-align:center; margin-bottom:20px;">종강시계 변경</h1>
+		<table style="margin: 0 auto; width: 70%; text-align: center; height: 150px;">
+			<tbody><tr style="margin:10px;">
+				<td style="text-align: left;">⏱ 종강일 선택 </td>
+			</tr>
+			<tr>
+				<td>
+					<input type="text" id="datePicker" class="datepicker frm_input"><img class="ui-datepicker-trigger" src="" alt="..." title="...">
+				</td>
+			</tr>
+			<tr>
+				<td>
+					<input type="button" onclick="countTimeSet()" value="확인">
+					<input type="button" onclick="countTimeCancel()" value="취소">
+				</td>
+			</tr>
+		</tbody></table>
+	</div>
 </div>
-
 
 <?php
 /*
@@ -149,8 +185,8 @@ owlcarousel 시간조정, 개수조정, 오토플레이 조정
 
 
 -->
-<!-- 
-<div class="container margin-bottom-60">
+
+<!-- <div class="container margin-bottom-60">
 	<?php echo latest('theme/pic_basic_owl', 'gallery', 9, 24); ?>
 </div> -->
 

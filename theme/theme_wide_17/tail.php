@@ -35,8 +35,7 @@ if(G5_COMMUNITY_USE === false) {
 	<script type="text/javascript" src="<?php echo G5_THEME_URL?>/assets/countdown/js/jquery.final-countdown.js"></script>
 	<script type="text/javascript" src="<?php echo G5_THEME_URL?>/js/bootstrap-dropdownhover.js"></script>
 	<script type="text/javascript" src="<?php echo G5_THEME_URL?>/js/custom.js"></script>
-
-
+	
 	<script>
 		$(document).ready(function () {
 			//owl
@@ -71,26 +70,34 @@ if(G5_COMMUNITY_USE === false) {
 			setInterval(function() {
 				countClock();
 			}, 1000);
+
+			$("#countTime").on("click",function () {
+				$("#countTimeChange").css("display","block");
+				
+			})
+			
 		});
 		
 		var countDateString = new Date();
 		function countClock() {
 			<?php
 				$resultArr = array();
-				$query = "select * from g5_write_schedule";
+				$query = "select * from set_dday where use_yn='y' order by d_day desc";
 				$result = sql_query($query);
 
-
+				
 				for ($i = 0; $row = sql_fetch_array($result); $i++) {
-					array_push($resultArr, $row['mb_id']);
+					array_push($resultArr, $row['d_day']);
 				}
+				$countDateString = $resultArr[0].' 23:59:59';
 
 
-				// echo "<pre>\n";
+				// echo "var time = `<pre>";
 				// print_r($resultArr);
-				// echo "</pre>\n";
+				// echo "</pre>`";
 			?>
-			// countDateString = result.count;
+					// countDateString = result.count;
+					countDateString = '<?php echo $countDateString ?>';
 					// year, month(-1), day, hours, minutes, seconds
 					var countDate = new Date(countDateString);
 					var date = new Date();
@@ -132,56 +139,26 @@ if(G5_COMMUNITY_USE === false) {
 					$("#countTime2").html(leftHours+"<br/><p style='color:#878484;font-size: 15px;margin-top:-15%;'>Hour</p>");
 					$("#countTime3").html(leftMinutes+"<br/><p style='color:#878484;font-size: 15px;margin-top:-15%;'>Minute</p>");
 					$("#countTime4").html(leftSeconds+"<br/><p style='color:#878484;font-size: 15px;margin-top:-15%;'>Second</p>");
-			// $.ajax({
-			// 	url : '/loadCount',
-			// 	type : 'GET',
-			// 	success : function (result) {
-			// 		countDateString = result.count;
-			// 		// year, month(-1), day, hours, minutes, seconds
-			// 		var countDate = new Date(countDateString);
-			// 		var date = new Date();
-			// 		var year = date.getFullYear().toString();
-				
-			// 		var month = date.getMonth() + 1;
-			// 		month = month < 10 ? '0' + month.toString() : month.toString();
-				
-			// 		var day = date.getDate();
-			// 		day = day < 10 ? '0' + day.toString() : day.toString();
-				
-			// 		var hour = date.getHours();
-			// 		hour = hour < 10 ? '0' + hour.toString() : hour.toString();
-				
-			// 		var minutes = date.getMinutes();
-			// 		minutes = minutes < 10 ? '0' + minutes.toString() : minutes.toString();
-				
-			// 		var seconds = date.getSeconds();
-			// 		seconds = seconds < 10 ? '0' + seconds.toString() : seconds.toString();
-			// 		var currentTime = year+ "-"+month+"-"+day+" "+hour+":"+minutes+":"+seconds;
-					
-			// 		var totalSeconds = (countDate - date) / 1000;	//밀리초를 초로 바꾸고
-			// 		var leftDays = Math.floor(totalSeconds / 3600 / 24);	//남은날
-			// 		if(leftDays.toString().length==1){leftDays = "0"+ String(leftDays);}
-			// 		var leftHours = Math.floor(totalSeconds / 3600) % 24;	//남은시간
-			// 		if(leftHours.toString().length==1){leftHours = "0"+ String(leftHours);}
-			// 		var leftMinutes = Math.floor(totalSeconds / 60) % 60; //남은분
-			// 		if(leftMinutes.toString().length==1){leftMinutes = "0"+ String(leftMinutes);}
-			// 		var leftSeconds = Math.floor(totalSeconds) % 60;		//남은초
-			// 		if(leftSeconds.toString().length==1){leftSeconds = "0"+String(leftSeconds);}
-			// 		var leftCount = "[ "+leftDays+" / "+leftHours+" : "+leftMinutes+" : "+leftSeconds+" ]";
-			// 		$("#currentTime").html("현재시간  "+currentTime);
-			// 		var countTimeHTML = '[ <div id="countTime1" style="font-size:45px;width:15%;height:50px; text-align:center;display:inline-table;"></div> / '
-			// 								+'<div id="countTime2" style="font-size:45px;width:15%;height:50px; text-align:center;display:inline-table;"></div> : '
-			// 								+'<div id="countTime3" style="font-size:45px;width:15%;height:50px; text-align:center;display:inline-table;"></div> : '
-			// 								+'<div id="countTime4" style="font-size:45px;width:15%;height:50px; text-align:center;display:inline-table;"></div> ]';
-			// 		$("#countTime").html(countTimeHTML);
-			// 		$("#countTime1").html(leftDays+"<br/><p style='color:#878484;font-size: 15px;margin-top:-15%;'>Day</p>");
-			// 		$("#countTime2").html(leftHours+"<br/><p style='color:#878484;font-size: 15px;margin-top:-15%;'>Hour</p>");
-			// 		$("#countTime3").html(leftMinutes+"<br/><p style='color:#878484;font-size: 15px;margin-top:-15%;'>Minute</p>");
-			// 		$("#countTime4").html(leftSeconds+"<br/><p style='color:#878484;font-size: 15px;margin-top:-15%;'>Second</p>");
-			// 	}
-			// });
 		}
-
+		function countTimeSet () {
+			alert($("#datePicker").val());
+			var countTime = $("#datePicker").val();
+			$.ajax({
+				url : '/bbs/changeCount.php',
+				data:{countTime:countTime},
+				type : 'POST',
+				success : function (result) {
+					console.log(result);
+					if(result=='false') {
+						alert("관리자만 변경할 수 있습니다.");
+					} else {
+						alert("변경완료");
+						$("#countTimeChange").css("display","none");
+					}
+					countDateString = countTime;
+				}
+			});
+		}
 		function countTimeCancel () {
 			$("#countTimeChange").css("display","none");
 		}

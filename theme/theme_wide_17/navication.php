@@ -45,6 +45,14 @@
     transition-delay: 5s;
     visibility: visible;
 }
+
+.ui-datepicker-trigger {
+	display:none;
+}
+#countTime {
+	cursor:pointer;
+}
+
 </style>
 <nav class="navbar fixed-top navbar-expand-lg navbar-white bg-white fixed-top">
   <div class="container whipcontainer" style="text-align:center; width:80%;">

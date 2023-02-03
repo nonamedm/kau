@@ -515,7 +515,7 @@ mark {
 }
 
 .img-fluid {
-    max-width: 80%;
+    /* max-width: 80%; */
     height: auto;
     margin: 0 auto;
 }
@@ -620,7 +620,7 @@ pre code {
     }
     .container-body {
         max-width: 80%;
-        margin-left:20%;
+        /* margin-left:20%; */
         width: 80%;
         padding-right: 5%;
         padding-left: 5%;
@@ -633,7 +633,7 @@ pre code {
     }
     .container-body {
         max-width: 80%;
-        margin-left:20%;
+        /* margin-left:20%; */
     }
 }
 .employee-card:hover {

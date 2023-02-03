@@ -66,7 +66,7 @@ include_once(G5_THEME_PATH.'/leftnav.php');
                 } else if ($bo_table=="notice") {
                     echo "공지사항";
                 } else if ($bo_table=="schedule") {
-                    echo "월간계획 · 이달의식단";
+                    echo "학사일정";
                 }
                 
                 ?>

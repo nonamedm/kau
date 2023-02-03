@@ -62,13 +62,13 @@ if(defined('_INDEX_')) {
 @media (min-width: 993px) and (max-width:1089px) {
 	.center-heading, #bo_w, #bo_v {
 		margin-top:15px !important;
-		margin-left:20%;
+		/* margin-left:20%; */
 	}
 }
 @media (min-width: 1090px) {
 	.center-heading, #bo_w, #bo_v {	
 		margin-top:150px !important;
-		margin-left:20%;
+		/* margin-left:20%; */
 	}
 }
 .about-bg {
