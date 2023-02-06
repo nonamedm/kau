@@ -24,7 +24,7 @@ add_stylesheet('<link rel="stylesheet" href="'.$board_skin_url.'/style.css">', 0
 			}
 		</style>
 
-        <div class="container margin-top-40">
+        <div class="container container-body margin-top-40">
             <div class="row">
                 <div class="col-sm-12">
 					<section id="bo_w">

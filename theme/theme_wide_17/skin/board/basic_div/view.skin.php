@@ -47,7 +47,7 @@ add_stylesheet('<link rel="stylesheet" href="'.$board_skin_url.'/style.css">', 0
 include_once(G5_THEME_PATH.'/leftnav.php');
 ?>
 	<div class="divide80 mobile-none"></div>
-        <div class="container margin-top-40">
+        <div class="container container-body margin-top-40">
             <div class="row" style="overflow: hidden;">
                 <div class="col-sm-12">
 

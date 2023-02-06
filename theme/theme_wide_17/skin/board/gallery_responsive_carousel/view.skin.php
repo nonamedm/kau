@@ -61,7 +61,7 @@ add_stylesheet('<link rel="stylesheet" href="'.$board_skin_url.'/style.css">', 0
 
 
 <div class="divide80"></div>
-        <div class="container">
+        <div class="container container-body">
             <div class="row">
                 <div class="col-sm-12">
 				<!-- 게시물 읽기 시작 { -->

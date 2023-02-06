@@ -99,8 +99,8 @@ $thumb_height = 200;
       $(".variable").slick({
         dots: true, //페이징
         infinite: true,
-		arrows:false,
-		slidesToShow: 4,
+		arrows:true,
+		slidesToShow: 5,
 		slidesToScroll: 1,
 		autoplay: true,
 		autoplaySpeed: 2000,

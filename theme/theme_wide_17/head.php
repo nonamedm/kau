@@ -70,6 +70,10 @@ if(defined('_INDEX_')) {
 		margin-top:150px !important;
 		/* margin-left:20%; */
 	}
+	.center-heading {
+		max-width: 80%;
+		margin: 0 auto;	
+	}
 }
 .about-bg {
 	display:none;

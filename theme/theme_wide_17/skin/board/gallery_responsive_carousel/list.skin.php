@@ -14,13 +14,13 @@ add_stylesheet('<link rel="stylesheet" href="'.$board_skin_url.'/style.css">', 0
 		.b-position {
 			text-align:center;
 		}
-		.li-content {
+		/* .li-content {
 			list-style-type : disc;
 			list-style-position : inside;
 			text-indent: -15px;
     		padding-left: 10px;
 			font-size:12px;
-		}
+		} */
 		ul {
 			
 		}
@@ -35,14 +35,42 @@ add_stylesheet('<link rel="stylesheet" href="'.$board_skin_url.'/style.css">', 0
 
 
 
-		<div class="center-heading">
-			<h2 style="color:#696969; font-weight: 700; font-family: 'Roboto Sans-serif';">재활사 소개</h2>
-			<span class="center-line"></span>
-		</div>
-        <div class="container margin-bottom-60">
+        <div class="center-heading">
+            <h2 style="color:#696969; font-weight: 700; font-family: 'Roboto Sans-serif';">제휴안내</h2>
+            <span class="center-line"></span>
+        </div>
+        <div class="container-body margin-bottom-60">
+            <div class="center-heading">
+                <h2 style="color:#696969; font-weight: 700; font-family: 'Roboto Sans-serif';">
+                    <a href="/bbs/board.php?bo_table=edu">📃 교육</a>
+                </h2>                
+            </div>
 			<div class="container margin-bottom-60">
-				<!-- <?php echo latest('theme/pic_basic_owl', 'gallery', 9, 24); ?> -->
-				<?php echo latest('theme/pic_basic_slide', 'gallery', 9, 24); ?>
+                <?php echo latest('theme/pic_basic_slide', 'edu', 10, 24); ?>
+			</div>
+            <div class="center-heading">
+                <h2 style="color:#696969; font-weight: 700; font-family: 'Roboto Sans-serif';">
+                    <a href="/bbs/board.php?bo_table=culture">🎬 문화</a>
+                </h2>
+            </div>
+			<div class="container margin-bottom-60">
+                <?php echo latest('theme/pic_basic_slide', 'culture', 10, 24); ?>
+			</div>
+            <div class="center-heading">
+                <h2 style="color:#696969; font-weight: 700; font-family: 'Roboto Sans-serif';">
+                    <a href="/bbs/board.php?bo_table=life">🏡 생활</a>
+                </h2>
+            </div>
+			<div class="container margin-bottom-60">
+                <?php echo latest('theme/pic_basic_slide', 'life', 10, 24); ?>
+			</div>
+            <div class="center-heading">
+                <h2 style="color:#696969; font-weight: 700; font-family: 'Roboto Sans-serif';">
+                    <a href="/bbs/board.php?bo_table=medi">🩺 의료</a>
+                </h2>
+            </div>
+			<div class="container margin-bottom-60">
+				<?php echo latest('theme/pic_basic_slide', 'medi', 10, 24); ?>
 			</div>
             
 

@@ -61,8 +61,8 @@ include_once(G5_THEME_PATH.'/leftnav.php');
         <div class="center-heading">
 			<h2 style="color:#696969; font-weight: 700; font-family: 'Roboto Sans-serif';">
                 <?php 
-                if($bo_table=="counsel") {
-                    echo "상담문의";
+                if($bo_table=="request") {
+                    echo "청원게시판";
                 } else if ($bo_table=="notice") {
                     echo "공지사항";
                 } else if ($bo_table=="schedule") {
@@ -129,7 +129,13 @@ include_once(G5_THEME_PATH.'/leftnav.php');
 		
 		<div class="e_num_ti"><?php if ($is_checkbox) { ?><input type="checkbox" id="chkall" onclick="if (this.checked) all_checked(true); else all_checked(false);"><?php } ?> 번호</div>
 		<div class="e_subject_ti">제목</div>
-		<div class="e_writer_ti">글쓴이</div>
+        <?php 
+            if($bo_table!="request") {
+        ?>   
+                <div class="e_writer_ti">글쓴이</div>
+        <?php
+            }
+        ?>
 		<div class="e_hit_ti"><?php echo subject_sort_link('wr_hit', $qstr2, 1) ?>조회 <i class="fa fa-sort" aria-hidden="true"></i></div>
 		<div class="e_date_ti"><?php echo subject_sort_link('wr_datetime', $qstr2, 1) ?>날짜  <i class="fa fa-sort" aria-hidden="true"></i></a></div>
 	</div>
@@ -186,7 +192,13 @@ include_once(G5_THEME_PATH.'/leftnav.php');
 		
 		</div>
 		<div class="m_view">
-			<div class="e_writer"><i class="fa fa-user-o" aria-hidden="true"></i> <?php echo $list[$i]['name'] ?></div>
+		<?php 
+            if($bo_table!="request") {
+        ?>   
+                <div class="e_writer"><i class="fa fa-user-o" aria-hidden="true"></i> <?php echo $list[$i]['name'] ?></div>
+        <?php
+            }
+        ?>	
 			<div class="e_hit"><i class="fa fa-eye" aria-hidden="true"></i> <?php echo $list[$i]['wr_hit'] ?></div>
 			<div class="e_date"><i class="fa fa-clock-o" aria-hidden="true"></i> <?php echo $list[$i]['datetime2'] ?></div>
 		</div>
@@ -225,10 +237,16 @@ include_once(G5_THEME_PATH.'/leftnav.php');
             <option value="wr_subject"<?php echo get_selected($sfl, 'wr_subject', true); ?>>제목</option>
             <option value="wr_content"<?php echo get_selected($sfl, 'wr_content'); ?>>내용</option>
             <option value="wr_subject||wr_content"<?php echo get_selected($sfl, 'wr_subject||wr_content'); ?>>제목+내용</option>
-            <option value="mb_id,1"<?php echo get_selected($sfl, 'mb_id,1'); ?>>회원아이디</option>
-            <option value="mb_id,0"<?php echo get_selected($sfl, 'mb_id,0'); ?>>회원아이디(코)</option>
-            <option value="wr_name,1"<?php echo get_selected($sfl, 'wr_name,1'); ?>>글쓴이</option>
-            <option value="wr_name,0"<?php echo get_selected($sfl, 'wr_name,0'); ?>>글쓴이(코)</option>
+            <?php 
+                if($bo_table!="request") {
+            ?>   
+                <option value="mb_id,1"<?php echo get_selected($sfl, 'mb_id,1'); ?>>회원아이디</option>
+                <option value="mb_id,0"<?php echo get_selected($sfl, 'mb_id,0'); ?>>회원아이디(코)</option>
+                <option value="wr_name,1"<?php echo get_selected($sfl, 'wr_name,1'); ?>>글쓴이</option>
+                <option value="wr_name,0"<?php echo get_selected($sfl, 'wr_name,0'); ?>>글쓴이(코)</option>
+            <?php
+                }
+            ?>
         </select>
         <label for="stx" class="sound_only">검색어<strong class="sound_only"> 필수</strong></label>
         <input type="text" name="stx" value="<?php echo stripslashes($stx) ?>" required id="stx" class="sch_input" size="25" maxlength="20" placeholder="검색어를 입력해주세요">
