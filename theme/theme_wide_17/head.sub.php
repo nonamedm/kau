@@ -36,10 +36,10 @@ header("Pragma: no-cache"); // HTTP/1.0
 <head>
 <meta charset="utf-8">
 <meta property="og:url" content="http://nonamedm16.cafe24.com">
-<meta property="og:title" content="남원윤수민언어심리상담센터">
+<meta property="og:title" content="한국항공대학교총학생회">
 <meta property="og:type" content="website">
 <meta property="og:image" content="https://nonamedm16.cafe24.com/theme/theme_wide_17/img/logo.png">
-<meta property="og:description" content="남원윤수민언어심리상담센터는 행복한 변화를 지원합니다">
+<meta property="og:description" content="한국항공대학교총학생회">
 <?php
 if (G5_IS_MOBILE) {
     echo '<meta name="viewport" content="width=device-width,initial-scale=1.0,minimum-scale=0,maximum-scale=10,user-scalable=yes">'.PHP_EOL;
@@ -53,7 +53,7 @@ if (G5_IS_MOBILE) {
 if($config['cf_add_meta'])
 echo $config['cf_add_meta'].PHP_EOL;
 ?>
-<title>남원윤수민언어심리상담센터</title>
+<title>한국항공대학교총학생회</title>
 <?php
 $shop_css = '';
 if (defined('_SHOP_')) $shop_css = '_shop';

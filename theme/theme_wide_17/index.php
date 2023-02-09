@@ -47,7 +47,7 @@ $(function(){
 	  <!-- Slide One - Set the background image for this slide in the line below -->
 	  <div class="carousel-item active" style="background-image: url('<?php echo G5_THEME_URL?>/img/main2.jpg'); height: 250px; margin-top: 100px;">
 		<div class="carousel-caption d-md-block">
-		  <!-- <h3 class="ks4" style="text-shadow: rgb(0 0 0 / 40%) 0px 4px 5px;">남원윤수민언어심리상담센터</h3> -->
+		  <!-- <h3 class="ks4" style="text-shadow: rgb(0 0 0 / 40%) 0px 4px 5px;"></h3> -->
 		</div>
 	  </div>
 	</div>
@@ -208,9 +208,9 @@ owlcarousel 시간조정, 개수조정, 오토플레이 조정
 			<iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3251.430858410807!2d127.39172170580684!3d35.41935541904724!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x356e2f48801d4c51%3A0xb5a7afbf5d59974f!2z64Ko7JuQ7JWE64-Z67Cc64us7IS87YSw!5e0!3m2!1sko!2skr!4v1667371520989!5m2!1sko!2skr" width="100%" height="350" style="border:0;" allowfullscreen="" loading="lazy" referrerpolicy="no-referrer-when-downgrade"></iframe>	
 		</div>		
 		<div class="col-lg-6 col-md-6 col-sm-6 col-xs-6" style="padding: 3.5%;">
-			<p style="font-size: 20px;font-weight: bold;margin-bottom: 10px;color: #525252;">남원윤수민언어심리상담센터</p>
-			<p style="font-size: 18px;margin-bottom: 10px;color: #525252;">Tel. 063. 636. 4875</p>
-			<p style="font-size: 15px;margin-bottom: 10px;color: #525252;">Address. 전북 남원시 농고길 56 용성고 옆</p>
+			<p style="font-size: 20px;font-weight: bold;margin-bottom: 10px;color: #525252;"></p>
+			<p style="font-size: 18px;margin-bottom: 10px;color: #525252;"></p>
+			<p style="font-size: 15px;margin-bottom: 10px;color: #525252;"></p>
 		</div>		
 	</div>
 </div> -->

@@ -38,8 +38,8 @@ if($bo_table == 'free'){
 // gallery 게시판
 if($bo_table == 'gallery'){
 	$background_images = $board_gallery;
-	$title = '남원윤수민언어심리상담센터';
-	$title_sub = '남원윤수민언어심리상담센터는 행복한 변화를 지원합니다.';
+	$title = '한국항공대학교총학생회';
+	$title_sub = '한국항공대학교총학생회';
 }
 
 // QA 게시판
