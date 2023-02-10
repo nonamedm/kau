@@ -133,6 +133,10 @@ include_once(G5_THEME_PATH.'/leftnav.php');
             if($bo_table!="request") {
         ?>   
                 <div class="e_writer_ti">글쓴이</div>
+                <?php
+            } else if($is_admin) {
+        ?>
+                <div class="e_writer_ti">글쓴이</div>
         <?php
             }
         ?>
@@ -192,8 +196,12 @@ include_once(G5_THEME_PATH.'/leftnav.php');
 		
 		</div>
 		<div class="m_view">
-		<?php 
-            if($bo_table!="request") {
+		<?php
+            if ($bo_table != "request") {
+        ?>   
+                <div class="e_writer"><i class="fa fa-user-o" aria-hidden="true"></i> <?php echo $list[$i]['name'] ?></div>
+        <?php
+            } else if($is_admin) {
         ?>   
                 <div class="e_writer"><i class="fa fa-user-o" aria-hidden="true"></i> <?php echo $list[$i]['name'] ?></div>
         <?php
