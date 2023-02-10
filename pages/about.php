@@ -80,6 +80,12 @@ include_once(G5_THEME_PATH.'/leftnav.php');
       <div class="row">
         <div class="col-lg-6" style="text-align:center;">
 			<img src="<?php echo G5_URL?>/pages/img/intro.jpg" class="img-fluid" style="width:100%;">
+			<?php if($is_admin){?>
+			<form enctype='multipart/form-data' action='introImgUpload.php' method='post'>
+				<input type='file' name='myfile'>
+				<button>업로드</button>
+			</form>
+			<?php }?>
 			<p class="ks3" style="text-align:center;">회장 이정식 | 부회장 장연아</p>
         </div>
         <div class="col-lg-6 ks4">

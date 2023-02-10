@@ -32,10 +32,10 @@ if( !in_array($ext, $allowed_ext) ) {
 }
  
 // 파일 이동
-move_uploaded_file( $_FILES['myfile']['tmp_name'], "$uploads_dir/$name");
+move_uploaded_file( $_FILES['myfile']['tmp_name'], "$uploads_dir/intro.jpg");
 
 // 파일 정보 출력
-echo $_FILES['myfile']['tmp_name'], "$uploads_dir/$name";
+// echo $_FILES['myfile']['tmp_name'], "$uploads_dir/$name";
 // echo "<h2>파일 정보</h2>
 // <ul>
 // 	<li>파일명: $name</li>
