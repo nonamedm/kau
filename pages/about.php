@@ -86,7 +86,22 @@ include_once(G5_THEME_PATH.'/leftnav.php');
 				<button>업로드</button>
 			</form>
 			<?php }?>
-			<p class="ks3" style="text-align:center;">회장 이정식 | 부회장 장연아</p>
+			<p class="ks3" style="text-align:center;">
+			<?php 
+				$loadText = array();
+				$sql = " select * from set_text where category='intro_name'";
+				$result	= sql_fetch($sql);
+				for ($i = 0; $row = sql_fetch_array($result); $i++) {
+					array_push($loadText, $row['text']);		
+				}
+				$returnText = $loadText[0];
+				echo $loadText[0];
+				echo $result['text'];
+			?>
+			<?php if($is_admin){?>
+				<button value="intro_name" onclick="setText('intro_name')" class="btn btn_admin"><i class="fa fa-gear" aria-hidden="true"></i> 설정</button>
+			<?php }?>
+			</p>
         </div>
         <div class="col-lg-6 ks4">
 			<ul class="list-unstyle">

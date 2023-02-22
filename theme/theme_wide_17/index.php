@@ -45,7 +45,7 @@ $(function(){
 	</ol> -->
 	<div class="carousel-inner" role="listbox">
 	  <!-- Slide One - Set the background image for this slide in the line below -->
-	  <div class="carousel-item active" style="background-image: url('<?php echo G5_THEME_URL?>/img/main2.jpg'); height: 250px; margin-top: 100px;">
+	  <div class="carousel-item active" style="background-image: url('<?php echo G5_THEME_URL?>/img/main2.jpg'); height: 375px; margin-top: 5%;">
 		<div class="carousel-caption d-md-block">
 		  <!-- <h3 class="ks4" style="text-shadow: rgb(0 0 0 / 40%) 0px 4px 5px;"></h3> -->
 		</div>
@@ -66,17 +66,38 @@ $(function(){
 
 <!-------------------------- 게시판 -------------------------->
 <!-- <div class="padding-top-60 col-lg-8" style="margin:0 auto;"> -->
+	<?php 
+	$resultArr2 = array();
+	$query = "select * from set_dday where use_yn='y' order by d_day desc";
+	$result = sql_query($query);
+
+
+	for ($i = 0; $row = sql_fetch_array($result); $i++) {
+		array_push($resultArr2, $row['now_no']);
+	}
+	$chooseLec = $resultArr2[0];
+	?>
 <div class="col-lg-10" style="margin:0 auto;">
 	<div class="container">
 		<div class="row">
 			<div class="col-lg-5 col-md-12 col-sm-12 col-xs-12">
 				<div>
-					<?php echo latest('theme/basic_main_one', 'notice', 5, 40);?>
+					<?php echo latest('theme/basic_main_one', 'notice', 5, 20);?>
 				</div>
 				<div class="clock" style="width:100%;height:153px;background:#fff; margin-top:10px; text-align:center;padding-top: 20px;">
-						<h1 style="font-size: 20px;font-weight: 800;color:#878484;">종강까지 남은 시간 ⏱
-							<span id="currentTime" style="display:none;"></span>
+						<h1 style="font-size: 20px;font-weight: 800;color:#878484;" id="currentLec">
+						<?php 
+							if($chooseLec=='finishLec') {
+						?>
+							종강까지 남은 시간 ⏱
+						<?php
+							} else {
+						?>
+							개강까지 남은 시간 ⏱
+						<?php } 
+						?>
 						</h1>
+						<span id="currentTime" style="display:none;"></span>
 						<div id="countTime" style="width:100%; height:100px; font-size:35px; text-align:center; overflow:hidden;">
 						</div>
 				</div>
@@ -92,7 +113,11 @@ $(function(){
 		<h1 style="font-size:20px; text-align:center; margin-bottom:20px;">종강시계 변경</h1>
 		<table style="margin: 0 auto; width: 70%; text-align: center; height: 150px;">
 			<tbody><tr style="margin:10px;">
-				<td style="text-align: left;">⏱ 종강일 선택 </td>
+				<td style="text-align: left;">
+					<input type="radio" id="finishLec" name="chooseLec" <?php if($chooseLec=='finishLec') echo 'checked' ?> value="finishLec"><label>⏱ 종강일 선택 </label>
+					<br>
+					<input type="radio" id="startLec" name="chooseLec" <?php if($chooseLec=='startLec') echo 'checked' ?> value="startLec"><label>⏱ 개강일 선택 </label>
+				</td>
 			</tr>
 			<tr>
 				<td>

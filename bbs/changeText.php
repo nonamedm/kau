@@ -6,14 +6,17 @@ if (!$is_admin) {
     //echo '<script>alert("관리자만 변경할 수 있습니다.")</script>';
     $result	= false;
 } else {
-    $countTime = $_POST["countTime"];
-    $chooseLec = $_POST["chooseLec"];
-    
-    $sql = " update set_dday set d_day="."'".$countTime."', now_no='".$chooseLec."'";
+    $text = $_POST["text"];
+    $category = $_POST["category"];
+
+
+    $sql = "update set_text set text='".$text."' where category='".$category."'";
     //echo $sql;
     sql_fetch($sql);
-    $result	= true;
+
+    $result = true;
 }
+// echo $loadText;
 echo json_encode($result);
 
 ?>

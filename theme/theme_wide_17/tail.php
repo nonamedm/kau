@@ -75,7 +75,6 @@ if(G5_COMMUNITY_USE === false) {
 				$("#countTimeChange").css("display","block");
 				
 			})
-			
 		});
 		
 		var countDateString = new Date();
@@ -90,8 +89,7 @@ if(G5_COMMUNITY_USE === false) {
 					array_push($resultArr, $row['d_day']);
 				}
 				$countDateString = $resultArr[0].' 23:59:59';
-
-
+				
 				// echo "var time = `<pre>";
 				// print_r($resultArr);
 				// echo "</pre>`";
@@ -141,45 +139,66 @@ if(G5_COMMUNITY_USE === false) {
 					$("#countTime4").html(leftSeconds+"<br/><p style='color:#878484;font-size: 15px;margin-top:-15%;'>Second</p>");
 		}
 		function countTimeSet () {
-			alert($("#datePicker").val());
+			//alert($("#datePicker").val());
 			var countTime = $("#datePicker").val();
+			var chooseLec = $("input[name=chooseLec]:checked").val();
 			$.ajax({
 				url : '/bbs/changeCount.php',
-				data:{countTime:countTime},
+				data:{countTime:countTime, chooseLec:chooseLec},
 				type : 'POST',
 				success : function (result) {
-					console.log(result);
+					//console.log(result.text);
 					if(result=='false') {
 						alert("관리자만 변경할 수 있습니다.");
 					} else {
-						alert("변경완료");
+						alert("변경되었습니다.");
 						$("#countTimeChange").css("display","none");
+						location.reload();
 					}
 					countDateString = countTime;
+				}
+			});
+		}
+		function setText (category) {
+			$("#set_text").css("display","block");
+			$("#text_category").val(category);
+			var category = category;
+			$.ajax({
+				url : '/bbs/loadText.php',
+				data:{category:category},
+				type: 'POST',
+				dataType: "json",
+				success : function (result) {
+					// console.log(result.text);
+					$("#load_text").val(result.text);
+				}
+			});
+		}
+		function changeText () {
+			var category = $("#text_category").val();
+			var text = $("#load_text").val();
+			$.ajax({
+				url : '/bbs/changeText.php',
+				data:{category:category, text:text},
+				type: 'POST',
+				dataType: "json",
+				success : function (result) {
+					alert("변경되었습니다.");
+					$("#set_text").css("display","none");
+					location.reload();
 				}
 			});
 		}
 		function countTimeCancel () {
 			$("#countTimeChange").css("display","none");
 		}
+		function cancelText () {
+			$("#set_text").css("display","none");
+		}
 		function scheduleDetailCancel () {
 			$("#scheduleDetail").css("display","none");
 		}
-		function changeCountTime () {
-			var countTime = $("#datePicker").val();
-			$.ajax({
-				url : '/changeCount',
-				data:{countTime:countTime},
-				type : 'POST',
-				success : function (result) {
-					countDateString = countTime;
-					alert("변경완료");
-					$("#countTimeChange").css("display","none");
-				}
-			});
-			
-		}
-
+		
 	</script>
 
 
@@ -196,6 +215,25 @@ if(G5_COMMUNITY_USE === false) {
         });
     });
     </script>
+</div>
+<div id="set_text" style="display:none; border: 2px solid black; padding:50px; border-radius: 20px;background-color: white; width: 300px; height:300px; position: fixed; top: 30%; left: 30%;z-index: 999;">
+	<h1 style="font-size:20px; text-align:center; margin-bottom:20px;">텍스트 수정</h1>
+	<table style="margin: 0 auto; width: 70%; text-align: center; height: 150px;">
+		<tbody>
+		<tr>
+			<td>
+				<input type="hidden" id="text_category" value="">
+				<textarea id="load_text">
+				</textarea>
+			</td>
+		</tr>
+		<tr>
+			<td>
+				<input type="button" onclick="changeText()" value="확인">
+				<input type="button" onclick="cancelText()" value="취소">
+			</td>
+		</tr>
+	</tbody></table>
 </div>
 
 <?php
