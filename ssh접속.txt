@@ -1,0 +1,4 @@
+ssh root@106.10.51.106 -p 10022
+yes
+chdgkr1q2w3e4r!
+
