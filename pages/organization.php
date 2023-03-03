@@ -151,7 +151,13 @@ include_once(G5_THEME_PATH.'/leftnav.php');
 		</article>		
 		<article id="sub_contents" class="cont sub_contents2 s_body" style="text-align:center; display:none;">
 			<img src="<?php echo G5_URL?>/pages/img/organization2.png" class="img-fluid">
-		</article>		
+		</article>
+		<?php if($is_admin){?>
+		<form enctype='multipart/form-data' action='orgaImgUpload.php' method='post'>
+			<input type='file' name='myfile'>
+			<button>업로드</button>
+		</form>
+		<?php }?>		
 	</div>
 
     

@@ -14,7 +14,7 @@ add_stylesheet('<link rel="stylesheet" href="'.$board_skin_url.'/wzappend.css?v=
 <?php
 include_once(G5_THEME_PATH.'/leftnav.php');
 ?>
-<article id="bo_v" style="width:<?php echo $width; ?>">
+<article id="bo_v" class="container container-body" style="width:<?php echo $width; ?>">
     <header>
         <h2 id="bo_v_title">
             <?php if ($category_name) { ?>

@@ -92,7 +92,7 @@ a:hover { color:#32c5d2; text-decoration: none; }
 }
 .bg-white {
     background-color: #ffffff!important;
-	box-shadow: rgba(0, 0, 0, 0.11765) 0px 1px 3px;
+	/*box-shadow: rgba(0, 0, 0, 0.11765) 0px 1px 3px;*/
     background-color: rgba(255, 255, 255, 0.98);
 }
 

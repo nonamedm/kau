@@ -129,11 +129,12 @@
 		<?php } ?>
 		<li class="nav-item dropdown login">
 		  <a class="nav-link dropdown-toggle" href="#" id="navbarDropdownBlog" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
-			LOGIN
+			회원서비스
 		  </a>
 		  <div class="dropdown-menu dropdown-menu-right" aria-labelledby="navbarDropdownBlog">
 			
 			<?php if($is_admin) { ?><a class="dropdown-item" href="<?php echo G5_URL?>/adm">관리자</a><?php } ?>
+			<?php if($is_admin) { ?><a class="dropdown-item" href="<?php echo G5_URL?>/bbs/board.php?bo_table=schedule">학사일정</a><?php } ?>
 			<!-- <a class="dropdown-item" href="<?php echo G5_BBS_URL; ?>/new.php">새글</a>
 			<a class="dropdown-item" href="<?php echo G5_BBS_URL; ?>/qalist.php">1:1문의</a> -->
 			<?php if($is_member) { ?>

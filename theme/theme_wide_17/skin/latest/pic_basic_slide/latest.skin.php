@@ -89,11 +89,11 @@ $thumb_height = 200;
 	</div>
                                                                 
 </div>
-<link rel="stylesheet" href="https://nonamedm16.cafe24.com/theme/theme_wide_17/skin/latest/pic_basic_slide/slick-theme.css">
-<link rel="stylesheet" href="https://nonamedm16.cafe24.com/theme/theme_wide_17/skin/latest/pic_basic_slide/slick.css">
-<link rel="stylesheet" href="https://nonamedm16.cafe24.com/theme/theme_wide_17/skin/latest/pic_basic_slide/style.css">
-<script src="https://nonamedm16.cafe24.com/theme/theme_wide_17/skin/latest/pic_basic_slide/script.js"></script>
-<script src="https://nonamedm16.cafe24.com/theme/theme_wide_17/skin/latest/pic_basic_slide/slick.js"></script>
+<link rel="stylesheet" href="https://stu-kau.co.kr/theme/theme_wide_17/skin/latest/pic_basic_slide/slick-theme.css">
+<link rel="stylesheet" href="https://stu-kau.co.kr/theme/theme_wide_17/skin/latest/pic_basic_slide/slick.css">
+<link rel="stylesheet" href="https://stu-kau.co.kr/theme/theme_wide_17/skin/latest/pic_basic_slide/style.css">
+<script src="https://stu-kau.co.kr/theme/theme_wide_17/skin/latest/pic_basic_slide/script.js"></script>
+<script src="https://stu-kau.co.kr/theme/theme_wide_17/skin/latest/pic_basic_slide/slick.js"></script>
 <script type="text/javascript">
     $(document).on('ready', function() {
       $(".variable").slick({

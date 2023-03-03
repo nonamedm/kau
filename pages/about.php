@@ -107,19 +107,20 @@ include_once(G5_THEME_PATH.'/leftnav.php');
 			<ul class="list-unstyle">
 			<li class="media">
 				<div class="media-body">
-					
-					<h5 class="mt-5 mb-1" style="font-weight:600;">안녕하세요.</h5>
-					<h5 class="mt-0 mb-1" style="font-weight:600;">한국항공대학교 제49대 총학생회 하랑입니다.</h5>
-					<br><br>
-					<p class="ks3">
-					저희 하랑 총학생회에서는 여러분과 함께, 새로운 항대 공동체에 맞는 초석을 세워가고자 합니다..
-					</p>
-					<p class="ks3">
-					항대라는 이름 아래에서 우리는 '하랑'이라는 이름과 같이 보다 높이, 하늘과 같이 높이 되어 결실을 이루어 내겠습니다..
-					</p>
-					<p class="ks3">
-					2023년에는 학우분들과 새로운 일상을 책임지고, 학우분들의 권리를 지켜낼 것이며, 함께하는 지속가능한 학생사회를 세울 수 있도록 노력하겠습니다. 
-					</p>
+				<?php 
+					$loadText = array();
+					$sql = " select * from set_text where category='intro_text'";
+					$result	= sql_fetch($sql);
+					for ($i = 0; $row = sql_fetch_array($result); $i++) {
+						array_push($loadText, $row['text']);		
+					}
+					$returnText = $loadText[0];
+					echo $loadText[0];
+					echo $result['text'];
+				?>
+				<?php if($is_admin){?>
+					<button value="intro_text" onclick="setText('intro_text')" class="btn btn_admin"><i class="fa fa-gear" aria-hidden="true"></i> 설정</button>
+				<?php }?>
 				</div>
 			</li>
 			</ul>

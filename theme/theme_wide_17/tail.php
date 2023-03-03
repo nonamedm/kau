@@ -35,7 +35,7 @@ if(G5_COMMUNITY_USE === false) {
 	<script type="text/javascript" src="<?php echo G5_THEME_URL?>/assets/countdown/js/jquery.final-countdown.js"></script>
 	<script type="text/javascript" src="<?php echo G5_THEME_URL?>/js/bootstrap-dropdownhover.js"></script>
 	<script type="text/javascript" src="<?php echo G5_THEME_URL?>/js/custom.js"></script>
-	
+	<script src="https://cdn.ckeditor.com/4.9.2/standard/ckeditor.js"></script>
 	<script>
 		$(document).ready(function () {
 			//owl
@@ -171,12 +171,13 @@ if(G5_COMMUNITY_USE === false) {
 				success : function (result) {
 					// console.log(result.text);
 					$("#load_text").val(result.text);
+					CKEDITOR.replace('load_text');
 				}
 			});
 		}
 		function changeText () {
 			var category = $("#text_category").val();
-			var text = $("#load_text").val();
+			var text = CKEDITOR.instances['load_text'].getData();
 			$.ajax({
 				url : '/bbs/changeText.php',
 				data:{category:category, text:text},
@@ -216,14 +217,14 @@ if(G5_COMMUNITY_USE === false) {
     });
     </script>
 </div>
-<div id="set_text" style="display:none; border: 2px solid black; padding:50px; border-radius: 20px;background-color: white; width: 300px; height:300px; position: fixed; top: 30%; left: 30%;z-index: 999;">
+<div id="set_text" style="display:none; border: 2px solid black; padding:50px; border-radius: 20px;background-color: white; width: 500px; height:500px; position: fixed; top: 30%; left: 30%;z-index: 999;">
 	<h1 style="font-size:20px; text-align:center; margin-bottom:20px;">텍스트 수정</h1>
 	<table style="margin: 0 auto; width: 70%; text-align: center; height: 150px;">
 		<tbody>
 		<tr>
 			<td>
 				<input type="hidden" id="text_category" value="">
-				<textarea id="load_text">
+				<textarea id="load_text" name="load_text" style="width:100%;">
 				</textarea>
 			</td>
 		</tr>

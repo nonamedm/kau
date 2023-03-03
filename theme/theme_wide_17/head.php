@@ -67,8 +67,6 @@ if(defined('_INDEX_')) {
 }
 @media (min-width: 1090px) {
 	.center-heading, #bo_w, #bo_v {	
-		margin-top:150px !important;
-		/* margin-left:20%; */
 	}
 	.center-heading {
 		max-width: 80%;
@@ -76,14 +74,14 @@ if(defined('_INDEX_')) {
 	}
 }
 .about-bg {
-	display:none;
+	/*display:none;*/
 }
 .center-heading, #bo_w, #bo_v {
 	/* margin-top:150px; */
 }
 </style>
 <div class="ety-main"></div>
-<div style="min-height:100%;">
+<div style="">
 
 <!-------------------------- 게시판 상단 배경 수정하는 곳 -------------------------->
 <?php 

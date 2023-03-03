@@ -35,10 +35,10 @@ header("Pragma: no-cache"); // HTTP/1.0
 <html lang="ko">
 <head>
 <meta charset="utf-8">
-<meta property="og:url" content="http://nonamedm16.cafe24.com">
+<meta property="og:url" content="<?php echo G5_URL ?>">
 <meta property="og:title" content="한국항공대학교총학생회">
 <meta property="og:type" content="website">
-<meta property="og:image" content="https://nonamedm16.cafe24.com/theme/theme_wide_17/img/logo.png">
+<meta property="og:image" content="<?php echo G5_URL ?>/theme/theme_wide_17/img/logo.png">
 <meta property="og:description" content="한국항공대학교총학생회">
 <?php
 if (G5_IS_MOBILE) {

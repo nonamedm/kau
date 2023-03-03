@@ -35,33 +35,33 @@ $(function(){
 });
 
 </script>
+<?php
+	$background_images = G5_URL.'/pages/img/1.jpg';
+?>
+<style>
+	/* mobile */
+	@media (min-width: 1px) and (max-width: 1089px) {
+			.about-bg{background-image:url('<?php echo $background_images?>');width:100%;-webkit-background-size:100% auto;-moz-background-size:100% auto;-o-background-size:100% auto;background-position:center; background-size: cover; background-repeat:no-repeat;color:#fff;height:100%;padding-top: 70px;}.ml-auto,.mx-auto{padding-top:10px;padding-bottom:10px}.lead{font-size:12px;font-weight:300}.display-4{ font-size:1.5rem;font-weight:300;}.btn,a.btn{line-height:20px!important;height:20px!important;padding:0 5px;text-align:center;font-weight:700;border:0;-webkit-transition:background-color .3s ease-out;-moz-transition:background-color .3s ease-out;-o-transition:background-color .3s ease-out;transition:background-color .3s ease-out}.btn-outline-secondary{font-size:11px;padding:0 5px}
+	}
+	/* desktop */
+	@media (min-width: 1090px) {
+		.about-bg{background-image:url('<?php echo $background_images?>');background-position:center center;background-repeat:no-repeat;color:#fff;height:400px}.lead{font-size:1.25rem;font-weight:300}.display-4{font-size:2.5rem;font-weight:300;line-height:1.2}
+	}
 
 
-<!-------------------------- 슬라이드 -------------------------->
-<header>
-  <div id="carouselExampleIndicators" class="carousel slide carousel-fade" data-ride="carousel" data-interval="5000">
-	<!-- <ol class="carousel-indicators">
-	  <li data-target="#carouselExampleIndicators" data-slide-to="0" class="active"></li>
-	</ol> -->
-	<div class="carousel-inner" role="listbox">
-	  <!-- Slide One - Set the background image for this slide in the line below -->
-	  <div class="carousel-item active" style="background-image: url('<?php echo G5_THEME_URL?>/img/main2.jpg'); height: 375px; margin-top: 5%;">
-		<div class="carousel-caption d-md-block">
-		  <!-- <h3 class="ks4" style="text-shadow: rgb(0 0 0 / 40%) 0px 4px 5px;"></h3> -->
-		</div>
-	  </div>
+
+</style>
+<div class="position-relative overflow-hidden p-md-5 text-center bg-white bg-sub-1 ety-mt-main about-bg">
+
+	<div class="col-md-5 p-lg-5 mx-auto my-5">
+	<h1 class="display-4 font-weight-bold" style="text-shadow: rgb(0 0 0 / 40%) 0px 4px 5px;"></h1>
+	<p class="lead font-weight-bold ko1" style="text-shadow: rgb(0 0 0 / 40%) 0px 4px 5px;">
+	
+	</p>
 	</div>
-	<!-- <a class="carousel-control-prev" href="#carouselExampleIndicators" role="button" data-slide="prev">
-	  <span class="carousel-control-prev-icon" aria-hidden="true"></span>
-	  <span class="sr-only">Previous</span>
-	</a>
-	<a class="carousel-control-next" href="#carouselExampleIndicators" role="button" data-slide="next">
-	  <span class="carousel-control-next-icon" aria-hidden="true"></span>
-	  <span class="sr-only">Next</span>
-	</a> -->
-  </div>
-</header>
-<!-------------------------- ./슬라이드 -------------------------->
+	<div class="product-device shadow-sm d-none d-md-block"></div>
+	<div class="product-device product-device-2 shadow-sm d-none d-md-block"></div>
+</div>
 
 
 <!-------------------------- 게시판 -------------------------->

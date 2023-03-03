@@ -70,9 +70,6 @@ add_stylesheet('<link rel="stylesheet" href="'.$faq_skin_url.'/style.css">', 0);
 			.menu{display:inline;}
             
 		}
-        .center-heading {
-            margin-top:150px;
-        }
 	</style>
 
 

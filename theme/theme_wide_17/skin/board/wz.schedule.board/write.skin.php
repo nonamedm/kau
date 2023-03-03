@@ -34,7 +34,7 @@ add_stylesheet('<link rel="stylesheet" href="'.$board_skin_url.'/style.css?v=191
 <?php
 include_once(G5_THEME_PATH.'/leftnav.php');
 ?>
-<section id="bo_w">
+<section id="bo_w" class="container container-body">
     <h2 class="sound_only"><?php echo $g5['title'] ?></h2>
 
     <!-- 게시물 작성/수정 시작 { -->

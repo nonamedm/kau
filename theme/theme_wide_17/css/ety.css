@@ -12,7 +12,7 @@
 @media (min-width: 1090px) {
 
 	.fixed-header {display:block;}
-	.login{display:none}
+	.login{}
 	.mpage{display:none;}
 
 
