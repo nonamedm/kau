@@ -31,9 +31,6 @@ add_stylesheet('<link rel="stylesheet" href="'.$board_skin_url.'/style.css?v=191
 
 <!-- 밑에 add_stylesheet 함수를 사용하지 않는이유은 가끔 홈페이지 개발시 오류로 add_stylesheet 함수가 먹지 않는 현상으로 인해 사용하지 않습니다. -->
 <link rel="stylesheet" href="<?php echo WCAL_PLUGIN_URL;?>/css/style.css">
-<?php
-include_once(G5_THEME_PATH.'/leftnav.php');
-?>
 <section id="bo_w" class="container container-body">
     <h2 class="sound_only"><?php echo $g5['title'] ?></h2>
 

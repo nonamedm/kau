@@ -141,9 +141,6 @@ include_once(G5_THEME_PATH.'/head.php');
 
 
 
-<?php
-include_once(G5_THEME_PATH.'/leftnav.php');
-?>
 	<div class="center-heading en1 margin-top-40">
 		<h2 class="font-weight-bold" style="color:#696969;">오시는길</h2>
 		<span class="center-line"></span>

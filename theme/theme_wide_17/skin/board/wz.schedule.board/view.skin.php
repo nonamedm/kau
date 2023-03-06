@@ -11,9 +11,6 @@ add_stylesheet('<link rel="stylesheet" href="'.$board_skin_url.'/wzappend.css?v=
 <script src="<?php echo G5_JS_URL; ?>/viewimageresize.js"></script>
 
 <!-- 게시물 읽기 시작 { -->
-<?php
-include_once(G5_THEME_PATH.'/leftnav.php');
-?>
 <article id="bo_v" class="container container-body" style="width:<?php echo $width; ?>">
     <header>
         <h2 id="bo_v_title">

@@ -35,9 +35,6 @@ add_stylesheet('<link rel="stylesheet" href="'.$board_skin_url.'/style.css">', 0
 			.menu{display:inline;}
 		}
 	</style>
-<?php
-include_once(G5_THEME_PATH.'/leftnav.php');
-?>
         <div class="container container-body margin-top-60 margin-bottom-60">
             <div class="row" style="overflow: hidden;">
                 <div class="col-sm-12" style="overflow-y: auto;">

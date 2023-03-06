@@ -73,9 +73,6 @@ add_stylesheet('<link rel="stylesheet" href="'.$faq_skin_url.'/style.css">', 0);
 	</style>
 
 
-<?php
-include_once(G5_THEME_PATH.'/leftnav.php');
-?>
 
 <div class="center-heading" style="">
     <h2 style="color:#696969; font-weight: 700; font-family: 'Roboto Sans-serif';">자주하는 질문</h2>

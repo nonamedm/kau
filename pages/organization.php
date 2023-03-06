@@ -137,9 +137,6 @@ include_once(G5_THEME_PATH.'/head.php');
 	</style>
 
 
-<?php
-include_once(G5_THEME_PATH.'/leftnav.php');
-?>
 
 	<div class="center-heading en1 margin-top-40">
 		<h2 class="font-weight-bold" style="color:#696969;">조직도</h2>
