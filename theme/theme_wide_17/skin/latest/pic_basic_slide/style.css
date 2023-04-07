@@ -7,7 +7,7 @@
 .product_lt .lt_more {position:absolute;top:11px;right:10px;display:block;width:25px;line-height:25px;color:#aaa;border-radius:3px;text-align:center;}
 .product_lt .lt_more:hover{color:#777}
 
-.gall_content{padding:1em; min-height:150px; height:100%; border:1px solid #ddd;}
+.gall_content{padding:1em; min-height:75px; height:100%; border:1px solid #ddd;}
 
 .gall_content a{font-size:1.0rem; outline:0;}
 

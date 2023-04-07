@@ -1,7 +1,7 @@
 <?php
 header('Content-Type: text/html; charset=utf-8');
 // 설정
-$uploads_dir = './img'; ///pages/img/intro.jpg
+$uploads_dir = '/var/www/html/pages/img'; ///pages/img/intro.jpg
 $allowed_ext = array('jpg','jpeg','png','gif');
  
 // 변수 정리
